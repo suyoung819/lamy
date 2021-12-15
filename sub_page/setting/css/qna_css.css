@@ -1,0 +1,40 @@
+@charset="utf-8";
+
+* { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0;}
+html,body {margin: 0; padding: 0;}
+li {list-style: none;}
+
+#warp {width: 100%; height: auto; position: relative;}
+
+
+/* ---------TITLE / TAB MENU ----------*/
+#title {background: url(../image/bg_img/product_setting.jpg); width: 100%; height: 400px; background-size: cover; background-position: center;}
+
+#tab > div { background: #fff;}
+#tab > div > a {color: #000;}
+
+
+/* --------QNA ----------*/
+.content_qna {width: 1200px; height: auto; margin: 0 auto; padding: 200px 0;}
+
+.qna_title {color: #000; font-size: 40px; text-align: center; margin-bottom: 100px; position: relative;}
+.qna_title::after {content: ""; position: absolute; width: 240px; height: 2px; background: #aaa; bottom: 0; left: 40%;}
+
+.content_qna_wrap {width: 100%; box-sizing: border-box; position: relative;}
+
+/*질문*/
+.q {width: 1000px; height: 50px; border: 1px solid #aaa; margin: 10px auto 0; position: relative; cursor: pointer; font-size: 20px; font-weight: 500;}
+.qna h3 {font-size: 30px; color: #0cf; font-weight: 500; display: inline-block; margin: 0 20px;}
+
+/* 질문 화살표 */
+.q_arr {display: inline-block; position: absolute; right: 10px; top: 50%; transform: translateY(-50%); transition: 1s;}
+.q_arr::before, .q_arr::after {content: ""; width: 25px; height: 4px; background: #0cf; border-radius: 20%; position: absolute; }
+.q_arr::before {transform: rotate(45deg); right: 15px;}
+.q_arr::after {transform: rotate(-45deg); right: 0px;}
+
+/* 대답 */
+.a {width: 1000px; height: auto; margin: 0 auto; background: #eee; padding: 30px 60px; display: none; overflow: hidden; box-sizing: border-box;}
+.a_txt {margin: 40px 20px 0; font-size: 16px; line-height: 32px; margin-bottom: 20px;}
+
+.color {color: #0cf;}
+li.q .rotate {transform: rotateX(-180deg);}

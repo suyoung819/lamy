@@ -1,0 +1,80 @@
+@charset="utf-8";
+@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+* { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0;}
+html,body {margin: 0; padding: 0;}
+
+#warp {width: 100%; height: 1080px; position: relative; overflow: hidden;}
+
+#bg {width: 140%; height: 0px; background: url(../image/bg_img/intro_bg.png); background-repeat: no-repeat; position: absolute; left: -250px; top: -100px;  transform: rotate(-30deg); animation: bg 4s; animation-fill-mode: forwards;}
+
+@keyframes bg {
+    from {height: 0%;}
+    to {height: 1200px;}
+}
+
+#warp > p {display: block; color: #000; transform: translate(-50%, -50%);  font-weight: bold; text-align: center; font-size: 25px; position: absolute; top: 50%; left: 50%;  animation: fadeinDown 1s; animation-delay: 2s; opacity: 0; animation-fill-mode:forwards;}
+
+@keyframes fadeinDown {
+  from {
+    opacity: 0;
+    transform: translate3d(-50%, -150%, 0);
+  }
+
+  to {
+    opacity: 1;
+    transform: translate3d(-50%, -50%, 0);
+  }
+}
+
+
+#black {width: 100%; height: 1080px; background: #000000; z-index: 2; opacity: 0; animation: black 1s; animation-delay: 3.5s; animation-fill-mode: forwards; position: relative;}
+
+@keyframes black {
+    from { opacity: 0;}
+    to {opacity: 1;}
+}
+
+
+#lamy {background: url(../image/Logo/lamy.png); width: 177px; height: 41px;  animation: slideinDown 1s; animation-delay: 5s; opacity: 0; position: absolute; top: 45%; left: 50%; transform: translate(-50%, -50%); animation-fill-mode: forwards;}
+
+
+@keyframes slideinDown {
+  from {
+    transform: translate3d(-50%, -150%, 0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(-50%, -50%, 0);
+    opacity: 1;
+    
+    }
+}
+
+
+
+#germany {background: url(../image/Logo/lamy-design-made-in-germany.png); width: 162px; height: 20px; position: absolute; top: 49%; left: 53%; transform: translate(-50%, -50%); animation: slideinright 1s; animation-delay: 6s; opacity: 0; animation-fill-mode: forwards;}
+
+@-webkit-keyframes slideinright {
+  from {
+    transform: translate3d(50%, -50%, 0);
+    visibility: visible;
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(-50%, -50%, 0);
+    opacity: 1;
+  }
+}
+
+
+#home {width: 150px; height: 30px; border: 2px solid #fff;text-align: center; line-height: 30px;  border-radius: 30px; position: absolute; top: 53%; left: 50%; transform: translate(-50%, -50%); animation: fadein 1s; animation-delay: 8s; opacity: 0; animation-fill-mode: forwards;}
+#home > a {color: #fff; text-decoration: none; letter-spacing: 5px; display: block;}
+
+@keyframes fadein {
+    from {opacity: 0;}
+    to {opacity: 1;}
+}

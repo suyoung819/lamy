@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>LAMY - made in Germany</title>
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/lamy_sub_css.css">
+    <link rel="stylesheet" href="css/store_css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+    <div id="warp">
+    <!-- 네비게이션 -->
+    <header>
+        <nav>
+            <div id="logo"><a href="../../Lamy_index.html"><img src="image/Logo/lamy.png"></a></div>
+            <ul id="menu">
+                <li id="m_1">
+                    <a href="../company/company_1.html">회사소개</a>
+                    <ul id="sub1" class="sub">
+                        <li><a href="../company/company_1.html">회사소개</a></li>
+                        <li><a href="../company/company_2.html">연혁</a></li>
+                    </ul>
+                </li>
+                <li id="m_2">
+                    <a href="../product/product_1.html">제품소개</a>
+                    <ul id="sub2" class="sub">
+                        <li><a href="../product/product_1.html">필기구</a></li>
+                        <li><a href="#">잉크</a></li>
+                        <li><a href="#">선물세트</a></li>
+                    </ul>    
+                </li>
+                <li id="m_3">
+                    <a href="../setting/qna.html">제품관리법</a>
+                    <ul id="sub3" class="sub">
+                        <li><a href="#">제품관리법</a></li>
+                        <li><a href="../setting/qna.html">FAQ</a></li>
+                    </ul>
+                </li>
+                <li id="m_4"><a href="../store/store.html">판매처</a></li>
+            </ul>
+        </nav>             
+    </header>
+    <!-- // 네비게이션 // -->
+    
+    <!-- 페이지 타이틀 -->
+    <section id="title">
+        <div id="bg_opacity"></div>
+        <div id="t_warp">
+            <div id="title_txt">
+                <div></div>
+                <p>판 매 처</p>
+            </div>
+        </div>
+    </section>
+    <!-- // 페이지 타이틀 // -->
+    
+    <!-- 메인컨텐츠 -->
+    <section id="store_bg">
+        <div id="store_main">
+            <div id="store_img">
+                <div id="flagship">
+                    <img src="image/store/lamy_store_hanam1.jpg">
+                    <img src="image/store/lamy_store_goyang.jpg">
+                </div>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3163.3985471854376!2d127.22021806580707!3d37.5456729330794!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xbf6f19bd4ac702bc!2z7Iqk7YOA7ZWE65OcIO2VmOuCqA!5e0!3m2!1sko!2skr!4v1528783772992" width="1200" height="700" frameborder="0" style="border:0" allowfullscreen class="hanam_map"></iframe>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1579.5583536644413!2d126.8937457083132!3d37.64646016870521!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x33d53c6fd0151b38!2z7Iqk7YOA7ZWE65OcIOqzoOyWkQ!5e0!3m2!1sko!2skr!4v1528783853743" width="1200" height="700" frameborder="0" style="border:0" allowfullscreen class="goyang_map"></iframe>
+                <button class="close_btn" title="지도 닫기">&#215;</button>
+            </div>
+            <table>
+                <tr>
+                    <th id="s_title" colspan="4">플래그십 스토어</th>
+                </tr>
+                <tr>
+                    <td>라미 스타필드 하남 컨셉샵</td>
+                    <td>경기도 하남시 신장동 277 스타필드 하남점 1층</td>
+                    <td>031-8072-8223</td>
+                    <td><div id="map_button" class="hanam">지도보기&nbsp;&nbsp;<span>▷</span></div></td>
+                </tr>
+                <tr>
+                    <td>라미 스타필드 고양 컨셉샵</td>
+                    <td>경기도 고양시 덕양구 고양대로 1955 스타필드 고양점 1층</td>
+                    <td>031-5173-1035</td>
+                    <td><div id="map_button" class="goyang">지도보기&nbsp;&nbsp;<span>▷</span></div></td>
+                </tr>
+            </table>
+            <!-- 지도 클릭 스크립트-->
+            <script>
+                //맵 나타남
+                $(".hanam").click(function(){
+                    $(".hanam_map").css("left", "0%");
+                    $(".goyang_map").css("left", "100%");
+                })
+                
+                $(".goyang").click(function(){
+                    $(".goyang_map").css("left", "0%");
+                    $(".hanam_map").css("left", "100%");
+                })
+                
+                //닫기
+                $(".close_btn").click(function(){
+                    $(".goyang_map").css("left", "100%");
+                    $(".hanam_map").css("left", "100%");
+                })
+            </script>
+            
+            <div>
+                <div id="s_title">제휴 스토어</div>
+                <div id="s_logo">
+                    <div id="artbox">
+                        <a href="http://www.poom.co.kr/" target="_blank">
+                            <img src="image/store_logo/artbox.png" title="아트박스">
+                        </a>
+                    </div>
+                    <div id="hottracks">
+                        <a href="http://www.hottracks.co.kr/" target="_blank">
+                            <img src="image/store_logo/hottracks.png" title="핫트렉스">
+                        </a>
+                    </div>
+                    <div id="tenxten">
+                        <a href="http://www.10x10.co.kr" target="_blank">
+                            <img src="image/store_logo/10x10.png" title="텐바이텐">
+                        </a>
+                    </div>
+                    <div id="pencafe">
+                        <a href="http://www.pencafe.co.kr/" target="_blank">
+                            <img src="image/store_logo/pencafe.png" title="펜카페">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- // 메인 컨텐츠 //-->

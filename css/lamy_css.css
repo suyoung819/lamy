@@ -1,0 +1,115 @@
+@charset="utf-8";
+
+* { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0;}
+html,body {margin: 0; padding: 0;}
+
+#warp {width: 100%; height: auto; position: relative;}
+
+
+/* -------- NAVIGATION 네비게이션 --------- */
+header {width: 100%; height: 80px; background: #323232; position: relative;}
+nav {width: 90%; max-width: 1200px; min-width: 800px; height: 100%; position: relative; margin: 0 auto; z-index: 999;}
+
+ul {padding: 0; margin: 0; list-style: none;}
+a {text-decoration: none; color: #fff;}
+
+#logo {float: left; margin-top: 20px; margin-right: 100px;}
+#menu {position: absolute; bottom: 10px; right: 0px;}
+#menu > li {float: left; width: 180px; text-align: center;}
+#menu > li > a {text-decoration: none; color: #fff; margin: 0 40px; font-size: 18px; letter-spacing: 1px; padding-bottom: 10px; transition: color 0.2s;}
+#menu > li > a:hover {color: #0cf; text-decoration: overline;}
+
+.sub {position: absolute; height: 0px; margin-top: 10px; background: rgba(170, 170, 170,0.7);  overflow: hidden; transition: height 0.5s}
+
+.sub > li {height: 50px; line-height: 50px; text-align: center; width: 180px; transition: background 0.3s}
+.sub > li > a {display: block;}
+.sub > li:hover {background: rgba(0, 204, 255, 0.7);}
+
+#m_1 > a:hover+#sub1 {height: 100px;}
+#sub1:hover {height: 100px;}
+#m_2 > a:hover+#sub2 {height: 150px;}
+#sub2:hover {height: 150px;}
+#m_3 > a:hover+#sub3 {height: 100px;}
+#sub3:hover {height: 100px;}
+
+#sub1:hover #sub1::before {color: #0cf; text-decoration: line-through;}
+
+
+
+
+
+/* -------- BANNER 배너 --------- */
+#banner {width: 100%; height: 600px; overflow: hidden; position: relative;}
+#banner_wrap {width: 400%; height: 600px; animation: sli 10s infinite; position: absolute; top: 0; left: 0;}
+
+#banner1 {background: url(../image/banner_image/banner.jpg)}
+#banner2 {background: url(../image/banner_image/banner2.jpg)}
+#banner3 {background: url(../image/banner_image/banner3.jpg)}
+
+#banner_wrap > a > div {width: 25%; height: 600px; background-repeat: no-repeat; float: left; background-position: center;}
+
+@keyframes sli {
+    0% {left: 0;}
+    20% {left: 0;}
+    35% {left: -100%;}
+    55% {left: -100%;}
+    70% {left: -200%;}
+    90% {left: -200%;}
+    100% {left: -300%;}
+}
+
+
+
+/* -------- PRODUCT 상품 -------- */
+#product {width: 100%; height: 850px; background: url(../image/bg_img/main_texture_bg.jpg);}
+#product_warp {width: 1200px; height: auto; margin: 0 auto;}
+
+/* @ 아이콘 @ */
+#category {width: 100%; height: 125px; border-bottom: 1px solid #aaaaaa; box-sizing: border-box;}
+#icon {width: 45%; height: 125px; margin: 0 auto;}
+#icon > a {float: left; margin: 30px; text-align: center; transition: 0.2s}
+#icon > a:nth-child(2) {margin: 30px 135px;}
+#icon img {width: 40px;}
+
+/* @ HOVER 효과 @ */
+#icon > a:hover {color: #0cf; transform: scale(1.1)}
+
+/* @ 제품 @ */
+#pro_box {width: 100%; height: 725px; position: relative;}
+#pro_box > a > div {width: 270px; height: 270px; transform: rotate(45deg); background: #fff; position: absolute;}
+
+/* @ 사각형 위치값 @ */
+#p_box1 {bottom: 120px; left: 65px;}
+#p_box2 {top: 135px; left: 265px;}
+#p_box3 {bottom: 120px; left: 465px;}
+#p_box4 {top: 135px; left: 665px;}
+#p_box5 {bottom: 120px; left: 865px;}
+
+/* @ 제품 사진 @ */
+#pro_box > a > div > div:first-child {width: 270px; height: 270px; background-size: cover;}
+#p_joy {background: url(../image/main_product/joy.png); transform: rotate(-90deg);}
+#p_safari {background: url(../image/main_product/safari.png); transform: rotate(0deg);}
+#p_lx {background: url(../image/main_product/lx.png); transform: rotate(-90deg);}
+#p_pico {background: url(../image/main_product/pico.png); transform: rotate(180deg);}
+#p_studio {background: url(../image/main_product/studio.png); transform: rotate(90deg);}
+
+/* @ HOVER 영역 @ */
+#p_hover,#p_hover2 {width: 270px; height: 270px; color: transparent; position: absolute; transition: 0.5s; top: 0; left: 0; z-index: 5}
+#pro_box span {width: 80%; height: 25px; margin: 0 auto; transform: rotate(-45deg); display: block; font-size: 20px; line-height: 25px; text-align: center; position: absolute; top: 125px; left: 25px;}
+
+/* @ HOVER 효과 @ */
+#pro_box > a > div:hover > #p_hover2 {top: -30px; left: -30px; color: #fff; background: rgba(0, 204, 255, 0.5);}
+#pro_box > a > div:hover > #p_hover {top: 30px; left: 30px; color: #fff;  background: rgba(0, 204, 255, 0.5);}
+
+
+/* ----------SETTING 제품관리법 ----------*/
+#setting {width: 100%; height: 250px; overflow: hidden; position: relative;}
+#set_bg {width: 100%; height: 350px; background: url(../image/bg_img/product_setting.jpg); background-size: cover; background-repeat: no-repeat; background-position: center; transition: 0.3s; position: absolute; top: 0; left: 0; z-index: -2;}
+#setting:hover #set_bg {transform: scale(1.2, 1.2);}
+
+#s_txt {width: 1200px; display: block; text-align: center; line-height: 250px; color: #fff; font-size: 30px; font-weight: 500; letter-spacing: 2px; margin: 0 auto;}
+
+
+
+/* -------------FOOTER ---------------*/
+footer {background: #aaaaaa; width: 100%; height: 130px;}

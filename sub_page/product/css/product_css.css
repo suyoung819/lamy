@@ -1,0 +1,204 @@
+@charset="utf-8";
+
+* { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0;}
+html,body {margin: 0; padding: 0;}
+
+#warp {width: 100%; height: auto; position: relative;}
+
+
+
+
+
+/* --------- 페이지 타이틀 / 탭메뉴 ----------*/
+#title {background: url(../image/bg_img/product_info.jpg); width: 100%; height: 400px; background-size: cover; background-position: center;}
+
+#tab > div { background: #fff;}
+#tab > div > a {color: #000;}
+
+
+
+
+
+/* ----------------------- 펜 메인 컨텐츠 ----------------------*/
+#product_main {width: 1200px; height: auto; margin: 0 auto; padding: 200px 0; box-sizing: border-box; display: table;}
+
+#product_title {color: #000; font-size: 40px; text-align: center; margin-bottom: 100px;}
+    #product_title div {width: 200px; height: 2px; margin: 0 auto; background: #aaa;}
+
+/* 펜 카테고리 */
+#pen_category {display: table; height: auto; margin: 0 auto; padding-bottom: 100px}
+    #pen_category .btn {float: left; font-size: 20px; text-align: center; margin: 0 50px; display: block; cursor: pointer; transition: 0.2s; outline: none; border: none; background: transparent;}
+.line {width: 100%; height: 2px; background: #aaa; margin-top: 3px; transition: 0.1s}
+
+/* 카테고리 마우스 오버*/
+#pen_category button:hover > .line {margin-top: -15px; background: #0cf;}
+#pen_category button:hover {color: #0cf;}
+
+/* 제품 */
+#product_box_warp {width: 100%; height: auto;}
+.pen_product_box {width: 250px; height: 500px; border: 2px solid #aaa; float: left; margin: 40px 25px; box-sizing: border-box; position: relative; overflow: hidden; cursor: pointer; display: none;}
+
+.show { display:  block;}
+
+.product_logo {width: 100px; height: 30px; position: absolute; top: 15px; left: 10px}
+.product_img {width: 450px; height: 100px; transform: rotate(-80deg); position: absolute; top: 200px; left: -100px;}
+
+/* 제품 이미지 */
+#logo_2000 {background: url(../image/Logo/lamy_2000.png) no-repeat; background-size: contain;}
+#img_2000 {background: url(../image/premium/LAMY_2000/LAMY2000_Fountainpens_black.png) no-repeat center; background-size: contain;}
+
+#logo_abc {background: url(../image/Logo/lamy_abc.png) no-repeat; background-size: contain;}
+#img_abc {background: url(../image/young/LAMY_abc/LAMY_abc_fountainpen_blue.png) no-repeat center; background-size: contain;}
+
+#logo_alstar {background: url(../image/Logo/lamy_al-star.png) no-repeat; background-size: contain;}
+#img_alstar{background: url(../image/young/LAMY_AL-star/lamy_alstar_fountainpen_bluegreen.png) no-repeat center; background-size: contain}
+
+#logo_imporium {background: url(../image/Logo/lamy_imporiun.png) no-repeat; background-size: contain;}
+#img_imporium {background: url(../image/premium/LAMY_imporium/LAMY_imporium_fountainpen_titaniummatt.png) no-repeat center; background-size: contain;}
+
+#logo_pico {background: url(../image/Logo/lamy_pico.png) no-repeat; background-size: contain;}
+#img_pico {background: url(../image/morden/LAMY_pico/LAMY_pico_laserorange.png) no-repeat center; background-size: contain;}
+
+#logo_aion {background: url(../image/Logo/lamy_aion.png) no-repeat; background-size: contain;}
+#img_aion {background: url(../image/morden/LAMY_aion/lamy_aion_black.png) no-repeat center; background-size: contain;}
+
+#logo_lx {background: url(../image/Logo/lamy_Lx.png) no-repeat; background-size: contain; }
+#img_lx {background: url(../image/morden/LAMY_Lx/lamy_lx_rosegold.png) no-repeat center; background-size: contain;}
+
+#logo_safari {background: url(../image/Logo/lamy_safari.png) no-repeat; background-size: contain;}
+#img_safari {background: url(../image/young/LAMY_safari/lamy_safari_pink.png) no-repeat center; background-size: contain;}
+
+/* 제품 마우스 오버 */
+.hover_plus {background: #0cf; width: 0px; height: 350px; z-index: 2; opacity: 0.5; transform: rotate(40deg); position: absolute; bottom: -140px; right: -120px; transition: 0.2s}
+    .hover_plus span {transform: rotate(0deg); position: absolute; top: 35%; left: 20px; color: #fff; font-size: 100px; font-weight: lighter; transition: 0.4s}
+
+.pen_product_box:hover .hover_plus {width: 200px;}
+.pen_product_box:hover .hover_plus span {transform: rotate(-40deg);}
+
+
+
+
+/*-------------- 팝업 -----------------*/
+#modal_bg {width: 100%; height: 100%; background: rgba(35, 35, 35, 0.7); z-index: 30; position: fixed; top: 0; left: 0; display: none;}
+
+.modal {width: 100%; height: 800px; position: fixed; top: 150px; left: 0; background: #fff;}
+
+/* 상품 이미지 슬라이드 */
+.slide_wrap {width: 100%; height: 250px; background: #aaa;}
+.slide_area {width: 1200px; height: 250px; overflow: hidden; margin: 0 auto; position: relative;}
+.slide {width: 400%; height: 250px;}
+.slide_img {width: 100%; height: 250px; position: absolute; left: -100%;}
+.slide_img:first-child {left: 0%;}
+.slide_img img {width: 900px; margin: 80px 150px;}
+
+.slide_area button {border: 0; background: transparent; color: #fff; opacity: 0.7; font-size: 100px; position: absolute; top: 50%; line-height: 0; transform: scale(0.5, 1.3); font-weight: 100; cursor: pointer;}
+.prev_btn {left: 0px;}
+.next_btn {right: 0px;}
+
+/* 상품 설명 */
+.modal_txt_area {width: 1200px; height: auto; margin: 0 auto; position: relative; padding-top: 30px; box-sizing: border-box;}
+
+.product_info {float: left; width: 250px; height: 400px; position: relative;}
+.product_name {width: 100%; height: 50px; margin-bottom: 30px;}
+.product_name img {width: 170px;}
+
+.nip_category {width: 100%; height: 30px; margin: 30px 0;}
+.nip_category img {width: 30px; height: 30px; float: left; margin-right: 8px;}
+
+.color_chip {width: 100%; height: auto;}
+.color_chip div {height: 20px; margin: 8px 0; border-radius: 5px; position: relative; cursor: pointer;}
+    #black {background: #000;}
+    #metal {background: linear-gradient(to left, #aaa, #e0e0e0, #aaa)}
+    #ember {background: linear-gradient(to left, #baaea5, #74615b, #baaea5)}
+
+.tooltip_img {width: 200px; height: 35px; background: #232323; border-radius: 10px; padding: 5px; box-sizing: border-box; position: absolute; bottom: -50%; left: 105%; visibility: hidden; opacity: 0; transition: opacity 0.3s;}
+.tooltip_img img {width: 180px; }
+.tooltip_img::after {content: ""; position: absolute; bottom: 30%; left: -5%; margin-left: -5px; border-width: 8px; border-style: solid; border-color: transparent #232323 transparent  transparent;}
+.tooltip:hover .tooltip_img {visibility: visible; opacity: 1;}
+
+.awards {width: 100%; position: absolute; bottom: 0px;}
+.awards img {float: left; height: 70px; margin-right: 8px;}
+
+.product_txt {float: right; width: 800px; height: 400px; font-size: 18px; line-height: 40px;}
+
+/* 닫기 버튼 */
+.close_btn {width: 50px; height: 50px; background: #0cf; position: absolute; top: -300px; right: 0; border: none; color: #fff; text-align: center; font-size: 35px; cursor: pointer;}
+
+
+/* /////////////////// 펜 메인 컨텐츠 /////////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------- 잉크 메인 컨텐츠 ---------------------------*/
+
+.ink_product_box {width: 250px; height: 250px; border: 2px solid #aaa; float: left; margin: 40px 25px; box-sizing: border-box; position: relative; overflow: hidden; cursor: pointer;}
+
+.ink_img {width: 100%; height: 100%;}
+
+/* 잉크 제품 이미지 */
+#img_30ml_ink {background: url(../image/ink/lamy_30ml_inkbottle.jpg) no-repeat center; background-size: contain;} 
+
+#img_50ml_ink {background: url(../image/ink/lamy_50ml_inkbottle.jpg) no-repeat center; background-size: contain;} 
+
+#img_konverter {background: url(../image/ink/lamy_konverter.jpg) no-repeat center; background-size: contain;}
+
+#img_cartridgs {background: url(../image/ink/lamy_Cartridgs.jpg) no-repeat center; background-size: contain;} 
+
+
+.ink_product_box:hover .hover_plus {width: 200px;}
+.ink_product_box:hover .hover_plus span {transform: rotate(-40deg);}
+
+
+/* /////////////////// 잉크 메인 컨텐츠 /////////////////////// */
+
+
+
+
+
+
+
+
+
+
+
+
+/* ---------------------- 선물세트 메인 컨텐츠 -------------------------*/
+
+.gift_product_box {width: 250px; height: 250px; border: 2px solid #aaa; float: left; margin: 40px 25px; box-sizing: border-box; position: relative; overflow: hidden; cursor: pointer;}
+
+.gift_img {width: 100%; height: 100%;}
+
+/* 세트 제품 페이지*/
+#img_set_50years {background: url(../image/gift/set_edition_50years.jpg) no-repeat center; background-size: contain;}
+
+#img_set_line {background: url(../image/gift/set_line_safari.jpg) no-repeat center; background-size: contain;}
+
+#img_set_minion {background: url(../image/gift/set_minion_safari.jpg) no-repeat center; background-size: contain;}
+
+#img_set_lx {background: url(../image/gift/set_lamy_lx.jpg) no-repeat center; background-size: contain;}
+
+#img_set_joy {background: url(../image/gift/set_lamy_joy_white.jpg) no-repeat center; background-size: contain;}
+
+#img_set_desk {background: url(../image/gift/set_lamy_desk.jpg) no-repeat center; background-size: contain;}
+
+#img_set_50years {background: url(../image/gift/set_edition_50years.jpg) no-repeat center; background-size: contain;}
+
+#img_set_50years {background: url(../image/gift/set_edition_50years.jpg) no-repeat center; background-size: contain;}
+
+#img_set_50years {background: url(../image/gift/set_edition_50years.jpg) no-repeat center; background-size: contain;}
+
+.gift_product_box:hover .hover_plus {width: 200px;}
+.gift_product_box:hover .hover_plus span {transform: rotate(-40deg);}
+
+
+
+

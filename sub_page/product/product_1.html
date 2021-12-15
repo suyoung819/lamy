@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>LAMY - made in Germany</title>
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanskr.css" rel="stylesheet">
+    <link rel="stylesheet" href="../../css/lamy_sub_css.css">
+    <link rel="stylesheet" href="css/product_css.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+</head>
+<body>
+<div id="warp">
+    
+    <!-- 네비게이션 -->
+    <header>
+        <nav>
+            <div id="logo"><a href="../../Lamy_index.html"><img src="image/Logo/lamy.png"></a></div>
+            <ul id="menu">
+                <li id="m_1">
+                    <a href="../company/company_1.html">회사소개</a>
+                    <ul id="sub1" class="sub">
+                        <li><a href="../company/company_1.html">회사소개</a></li>
+                        <li><a href="../company/company_2.html">연혁</a></li>
+                    </ul>
+                </li>
+                <li id="m_2">
+                    <a href="../product/product_1.html">제품소개</a>
+                    <ul id="sub2" class="sub">
+                        <li><a href="../product/product_1.html">필기구</a></li>
+                        <li><a href="../product/product_2.html">잉크</a></li>
+                        <li><a href="../product/product_3.html">선물세트</a></li>
+                    </ul>    
+                </li>
+                <li id="m_3">
+                    <a href="../setting/qna.html">제품관리법</a>
+                    <ul id="sub3" class="sub">
+                        <li><a href="#">제품관리법</a></li>
+                        <li><a href="../setting/qna.html">FAQ</a></li>
+                    </ul>
+                </li>
+                <li id="m_4"><a href="../store/store.html">판매처</a></li>
+            </ul>
+        </nav>             
+    </header>
+    <!-- // 네비게이션 // -->
+    
+    <!-- 페이지 타이틀 -->
+    <section id="title">
+        <div id="bg_opacity"></div>
+        <div id="t_warp">
+            <div id="title_txt">
+                <div></div>
+                <p>제 품 소 개</p>
+            </div>
+            <div id="tab">
+                <div class="on"><a href="../product/product_1.html">필기구</a></div>
+                <div><a href="../product/product_2.html">잉크</a></div>
+                <div><a href="../product/product_3.html">선물 세트</a></div>
+            </div>
+        </div>
+    </section>
+    <!-- // 페이지 타이틀 //-->
+    
+    <!-- 메인 컨텐츠 -->
+    <section id="product_main">
+       
+        <div id="product_title">펜<div></div></div>
+        
+        <div id="pen_category">
+            <button class="btn active" onclick="filterSelection('all')">
+                ALL
+                <div class="line"></div>
+            </button>
+            <button class="btn" onclick="filterSelection('primium')">
+                PRIMIUM WRITING
+                <div class="line"></div>
+            </button>
+            <button class="btn" onclick="filterSelection('modern')">
+                MODERN WRITING
+                <div class="line"></div>
+            </button>
+            <button class="btn" onclick="filterSelection('young')">
+                YOUNG WRITING
+                <div class="line"></div>
+            </button>
+        </div>
+        
+            <!-- 제품 -->
+        <div id="product_box_warp">
+            <div class="pen_product_box primium_w">
+                <div id="logo_2000" class="product_logo"></div>
+                <div id="img_2000" class="product_img"></div>
+                <div class="hover_plus"><span>+</span></div>
+            </div>
+            <div class="pen_product_box young_w">
+                <div id="logo_abc" class="product_logo"></div>
+                <div id="img_abc" class="product_img"></div>
+                <div class="hover_plus"><span>+</span></div>
+            </div>
+            <div class="pen_product_box young_w">
+                <div id="logo_alstar" class="product_logo"></div>
+                <div id="img_alstar" class="product_img"></div>
+                <div class="hover_plus"><span>+</span></div>
+            </div>
+            <div class="pen_product_box primium_w">
+                <div id="logo_imporium" class="product_logo"></div>
+                <div id="img_imporium" class="product_img"></div>
+                <div class="hover_plus"><span>+</span></div>
+            </div>
+            <div class="pen_product_box modern_w">
+                <div id="logo_aion" class="product_logo"></div>
+                <div id="img_aion" class="product_img"></div>
+                <div class="hover_plus"><span>+</span></div>
+            </div>
+            <div class="pen_product_box young_w">
+                <div id="logo_pico" class="product_logo"></div>
+                <div id="img_pico" class="product_img"></div>
+                <div class="hover_plus"><span>+</span></div>
+            </div>
+            <div class="pen_product_box modern_w">
+                <div id="logo_lx" class="product_logo"></div>
+                <div id="img_lx" class="product_img"></div>
+                <div class="hover_plus"><span>+</span></div>
+            </div>
+            <div class="pen_product_box young_w">
+                <div id="logo_safari" class="product_logo"></div>
+                <div id="img_safari" class="product_img"></div>
+                <div class="hover_plus"><span>+</span></div>
+            </div>            
+        </div>
+    </section>
+        <!--카테고리별 분류 스크립트-->
+    <script src="script/category.js"></script>
+    <!-- // 메인 컨텐츠 // -->
+    
+    <!-- 제품 상세 팝업-->
+    <div id="modal_bg">
+        <div class="modal">
+           
+            <!--슬라이드-->   
+            <div class="slide_wrap">
+                <div class="slide_area">
+                    <div class="slide">
+                        <div class="slide_img">
+                            <img src="image/premium/LAMY_2000/LAMY2000_Fountainpens_black.png" alt="만년필 블랙컬러" title="만년필 블랙 컬러">
+                        </div>
+                        <div class="slide_img">
+                            <img src="image/premium/LAMY_2000/LAMY2000_ballpointpen_palladium.png" alt="볼펜 팔라듐컬러" title="볼펜 팔라듐컬러">
+                        </div>
+                        <div class="slide_img">
+                            <img src="image/premium/LAMY_2000/LAMY2000_pencils_metal.png" alt="샤프펜슬 블랙 컬러" title="샤프펜슬 블랙 컬러">
+                        </div>
+                        <div class="slide_img">
+                            <img src="image/premium/LAMY_2000/LAMY2000_rollerballpen_blackamber.png" alt="롤러볼펜 블랙엠버 컬러" title="롤러볼펜 블랙엠버컬러">
+                        </div>
+                    </div>
+                    
+                    <!--좌우 버튼-->
+                    <button class="prev_btn">&lt;</button>
+                    <button class="next_btn">&gt;</button>
+                </div>
+            </div>
+            
+            <!--제품 설명-->
+            <div class="modal_txt_area">
+                <div class="product_name">
+                    <img src="image/Logo/lamy_2000.png" alt="LAMY 2000" title="LAMY 2000">
+                </div>
+                <div>
+                   
+                    <div class="product_info">
+                       
+                        <p>DESIGN BY<br>Gerd A. Müller</p>
+                        
+                        <div class="nip_category">
+                            <img src="image/icon/fountain_icon.svg" alt="fountain" title="fountain">
+                            <img src="image/icon/ballpoint_icon.svg" alt="ballpoint" title="ballpoint">
+                            <img src="image/icon/pencil_icon.svg" alt="pencil" title="pencil">
+                            <img src="image/icon/rollerball_icon.svg" alt="rollerball" title="rollerball">
+                        </div>
+                        
+                        <div class="color_chip">
+                            <div id="black" class="tooltip">
+                                <span class="tooltip_img">
+                                    <img src="image/premium/LAMY_2000/LAMY2000_Fountainpens_black.png" alt="">
+                                </span>
+                            </div>
+                            <div id="metal" class="tooltip">
+                                <span class="tooltip_img">
+                                    <img src="image/premium/LAMY_2000/LAMY2000_Fountainpens_metal.png" alt="">
+                                </span>
+                            </div>
+                            <div id="ember" class="tooltip">
+                                <span class="tooltip_img">
+                                    <img src="image/premium/LAMY_2000/LAMY2000_Fountainpens_blackamber.png" alt="">
+                                </span>
+                            </div>
+                        </div>
+                        
+                        <div class="awards">
+                            <img src="image/awards_logo/if.png" alt="if" title="if">
+                            <img src="image/awards_logo/reddot.png" alt="reddot" title="reddot">
+                        </div>    
+                    </div>
+                    
+                    <div class="product_txt">
+                        LAMY2000은 1966년부터 디자인 역사를 써 왔다. 시대를 초월한 고전으로서 그것은 오늘날에도 여전히 가장 현대적인 필기 도구 중 하나이다.<br><br>기능만으로 형태를 결정한다. 이러한 디자인 원리로, LAMY는 전 세계의 많은 디자인 애호가들의 마음을 사로잡았다. 이 모든 것은 LAMY2000년부터 시작되었습니다. 1966년에 상점 진열장에 처음 등장했을 때, 그것은 신분의 상징이 아니라 손으로 쓸 수 있는 정직하고 정밀한 도구를 찾는 현대 최초의 필기 도구였다. 스테인리스 강과 마크롤론 현대적인 재료로 제작됩니다. 
+                    </div>
+                </div>
+                
+                <!--닫기 버튼-->
+                <button class="close_btn">&#215;</button>
+            </div>
+            
+        </div>
+        
+    </div>
+        <!--슬라이드 버튼 스크립트-->
+    <script src="script/slide_btn.js"></script>
+        <!--팝업 스크립트-->
+    <script src="script/modal.js"></script>
+    <!-- // 제품 팝업 //-->
+    
+    <footer>
+        
+    </footer>
+    </div>

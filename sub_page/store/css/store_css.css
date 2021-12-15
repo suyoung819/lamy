@@ -1,0 +1,66 @@
+@charset="utf-8";
+
+* { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0;}
+html,body {margin: 0; padding: 0;}
+
+#warp {width: 100%; height: auto; position: relative;}
+
+
+/* --------- 타이틀 / 탭 메뉴 ----------*/
+#title {background: url(../image/bg_img/lamy_flagship_store.jpg); width: 100%; height: 400px; background-size: cover; background-position: center;}
+
+#tab > div { background: #232323;}
+#tab > div > a {color: #fff;}
+
+
+/*--------- 메인컨텐츠 ------------*/
+#store_bg {width: 100%; height: 1500px; background: #232323;}
+#store_main {width: 1200px; margin: 0 auto; padding-top: 200px;}
+
+/* 스토어 이미지, 지도 */
+#store_img { width: 1200px; height: 700px; overflow: hidden; margin: 0 auto; position: relative}
+#store_img > div {width: 100%; height: 100%; float: left; background-repeat: no-repeat; background-size: cover; background-position: center;}
+
+#flagship {position: relative;}
+#flagship > img {width: 1200px;}
+#flagship > img:first-child {}
+#flagship > img:last-child {position: absolute; top: 0;  animation: fade 5s alternate infinite; }
+
+@keyframes fade {
+    0% {opacity: 1;}
+    30% {opacity: 1;}
+    70% {opacity: 0;}
+    100% {opacity: 0;}
+}
+
+/*지도*/
+iframe {position: absolute; left: 0; width: 100%; height: 700px; display: block; z-index: 1; transition: left 0.5s;}
+.hanam_map {left: 100%;}
+.goyang_map {left: 100%;}
+
+/*닫기 버튼*/
+.close_btn {width: 50px; height: 50px; color: #fff; background: #0cf; border: none; font-size: 40px; line-height: 0; cursor: pointer; position: absolute; top: 300px; left: -50px; z-index: 2; display: block; transition: left 0.3s;}
+
+iframe:hover~.close_btn {left: 0px;}
+.close_btn:hover {left: 0px;}
+
+/* 스토어 주소 */
+table {width: 100%; height: auto; margin-top: 100px; text-align: center; color: #fff; font-weight: 300}
+#s_title {height: 50px; font-size: 20px; border-bottom: 1px #aaa solid; text-align: center; color: #fff; line-height: 50px; font-weight: bold}
+tr {height: 50px;}
+tr > td:nth-child(2) {text-align: left;}
+
+#map_button {width: 100%; border: 2px solid #aaa; color: #fff; font-weight: bold; border-radius: 10px; cursor: pointer; font-weight: 300;}
+#map_button > span {font-size: 12px; position: relative; top: -2px;}
+#map_button:active {background: #0cf;}
+
+/* 온라이 스토어 링크 */
+#store_main > div:last-child {margin-top: 100px;}
+#s_logo {display: table; margin: 0 auto; margin-top: 20px;}
+#s_logo > div {width: 200px; height: 60px; float: left; border-radius: 10px; margin: 0 20px; box-sizing: border-box;}
+#s_logo > div > a {display: block;}
+#s_logo > div > a > img {width: 80%; margin: 0 10%; }
+#artbox {background: #ff2700; padding-top: 15px;}
+#hottracks {background: #fff; padding-top: 15px;}
+#tenxten {background: #fff; padding-top: 10px;}
+#pencafe {background: #000; padding-top: 7px;}

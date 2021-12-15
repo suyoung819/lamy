@@ -1,0 +1,54 @@
+@charset="utf-8";
+
+* { font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0;}
+html,body {margin: 0; padding: 0;}
+
+#warp {width: 100%; height: auto; position: relative;}
+
+/* -------- NAVIGATION 네비게이션 --------- */
+header {width: 100%; height: 80px; background: #323232; position: relative;}
+nav {width: 90%; max-width: 1200px; min-width: 800px; height: 100%; position: relative; margin: 0 auto; z-index: 999;}
+
+ul {padding: 0; margin: 0; list-style: none;}
+a {text-decoration: none; color: #fff;}
+
+#logo {float: left; margin-top: 20px; margin-right: 100px;}
+#menu {position: absolute; bottom: 10px; right: 0px;}
+#menu > li {float: left; width: 180px; text-align: center;}
+#menu > li > a {text-decoration: none; color: #fff; margin: 0 40px; font-size: 18px; letter-spacing: 1px; padding-bottom: 10px; transition: color 0.2s;}
+#menu > li > a:hover {color: #0cf; text-decoration: overline;}
+
+.sub {position: absolute; height: 0px; margin-top: 10px; background: rgba(170, 170, 170,0.7);  overflow: hidden; transition: height 0.5s}
+
+.sub > li {height: 50px; line-height: 50px; text-align: center; width: 180px; transition: background 0.3s}
+.sub > li > a {display: block;}
+.sub > li:hover {background: rgba(0, 204, 255, 0.7);}
+
+#m_1 > a:hover+#sub1 {height: 100px;}
+#sub1:hover {height: 100px;}
+#m_2 > a:hover+#sub2 {height: 150px;}
+#sub2:hover {height: 150px;}
+#m_3 > a:hover+#sub3 {height: 100px;}
+#sub3:hover {height: 100px;}
+
+/* ---------- TITLE ---------------*/
+
+#bg_opacity {width: 100%; height: 100%; background: #000; opacity: 0.3;}
+
+#t_warp {width: 1200px; height: auto; margin: 0 auto; position: relative;}
+
+#title_txt {width: 250px; height: auto; margin: 0 auto; position: relative; bottom: 150px;}
+#title_txt > div {width: 85px; height: 8px; background: #0cf; margin: 0 auto;}
+#title_txt > p {font-size: 32px; color: #fff; font-weight: bold; text-align:
+center;}
+
+/* tabmenu */
+#tab {display:table; margin: 0 auto; position: relative; bottom: 85px;}
+#tab > div {width: 350px; height: 60px; float: left; border: 0.5px solid #aaa; text-align: center; line-height: 60px; font-size: 20px; cursor: pointer;}
+#tab > div > a {display: block;}
+
+
+#tab > .on {background: #0cf;}
+#tab > .on > a {color: #fff;}
+
+
